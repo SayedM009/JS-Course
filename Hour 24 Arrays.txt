@@ -1,0 +1,5 @@
+--- array.at(index) => return the element of that index.
+
+--- you can use foreach on maps or sets and the three parameters will be the same (value, index, array)
+
+--- genrate an array with numbers Array.from({length:5}, (_, i) => i)

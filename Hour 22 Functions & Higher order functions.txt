@@ -1,0 +1,8 @@
+--- First Class-Functions : is a consept exists or not in the lanauge that means functions can use as values.
+
+--- Higher Order Functions : That means a function receives a function as input and also can return a function 
+
+
+--- call(pointing to this keyword, ...)
+
+with call built-in-function you can chage this keyword 

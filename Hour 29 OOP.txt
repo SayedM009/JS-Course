@@ -1,0 +1,185 @@
+*** There is a differacne between an instance inherits from a class (class ------> instance ) and object inherits from a Prototype  (class -----> class)
+
+
+** 3 Ways to create an object linked to prototype.
+
+--- 1- Constractor Function 
+
+const Name!! = function(pram1, pram2,....) {
+	
+	// Instance properties
+	this.pram1 or anyname = pram1
+	this.pram2 or anyname = pram1
+
+	// Dont declare a method here because here if you will make thousand objects it gonna be bad for performance
+	this.name = function() {
+		
+	}
+
+}
+
+// Static function the objects that created from Constractor Function  will not inhertie
+Name!!.functionName () {
+}
+
+** new Name!! (pram1, pram2) // new keyword which is the base to build the object 
+
+** What happened behaind the sences 
+1- New {} is created
+2- function is called, this = {}
+3- {} linked to prototype
+4- function automatically return {}
+
+** ADD METHOD OR PROPERTY TO PROTOTYPE
+
+Name!!.prototype.anyName = property
+Name!!.prototype.anyName = {
+	// method
+}
+
+-- Show prototype
+objectName.__proto__
+
+-- Check if instance object from constractor function 
+objectName instanceof constractor function 
+
+** Prototype Chain v.v.i
+
+--- 2- ES5 Classes 
+
+** Class Expression
+const ClassName = class {}
+
+** Class Declaration
+class ClassName {
+	constructor(param1, param2) {
+		this.anyName = param1
+		this.anyName = param2
+	}
+	
+	// Methods
+	** that equal to (constructor function.prototype.anyname = value)
+	methodName () {
+		//code
+	}
+
+	// Geter function
+	get functionName() {}
+
+	// Seter function
+	set functionName(param) {}
+
+	// Static function ** No instance of this class will not inhertie this function (only class can use it)
+
+	static functionName() {}
+}
+
+** create an instance from class
+
+const anyName = new ClassName(param1, param2)
+
+`
+
+** Important things to know
+
+1- Classes are not hoisted (you can to call it before declarations).
+2- Classes are first-class citizens (that we can pass them into functions and also return them from functions).
+3- Classes are executed is strict mode always by default.
+
+
+--- 3- Object.create(object)
+
+const objectName = {
+	method() {
+		//code 
+	}
+	
+	setProperties(param1, param2) {
+		this.anyName = param1
+		this.anyName = param2
+	}
+ }
+
+const anyName = Object.create(objectName)
+
+
+*** Inhertance between Constractor Functions
+
+const CF1 = function (make, speed) {
+    this.make = make 
+    this.speed = speed
+}
+
+CF1.prototype.accelerate = function () {
+    console.log(`${this.make} going to ${this.speed += 10} km/h`)
+}
+CF1.prototype.brake = function () {
+    console.log(`${this.make} ${this.speed -= 5} km/h`)
+}
+
+const CF2 = function(make, speed, charge) {
+    CF1.call(this, make, speed) // inherite properties
+    this.charge = charge
+
+}
+
+CF2.prototype = Object.create(CF1.prototype); // Inherite proporties and methods
+CF2.prototype.constructor = CF2; // Fix the prototype of CF2
+CF2.prototype.chargeBattery = function (chargeTo) {
+    this.charge = chargeTo
+}
+CF2.prototype.accelerate = function() {
+    this.speed += 20
+    this.charge -= 1
+    console.log(`${this.make} going at ${this.speed} km/h, with a charge of ${this.charge}%`)
+}
+
+*** Inheritance between ES6 Classes
+
+class Cl1 {
+    constructor(name, serial, price) {
+        this.name = name;
+        this.serial = serial;
+        this.price = price;
+    }
+}
+
+class Cl2 extends Cl1 {
+    constructor(name, serial, price, size="Unknown") {
+        super(name, serial, price)
+        this.size = size
+    }
+    fullDetails(){
+        return `${this.name} Serial is ${this.serial} And Size Is ${this.size}.`
+    }
+}
+
+
+*** Object.create() Inheritance
+
+
+const Person = {
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+
+  calcAge() {
+    console.log(2040 - this.birthYear)
+  }
+}
+
+const student = Object.create(Person)
+student.init = function(firstName, birthYear, course) {
+  Person.init.call(this, firstName, birthYear)
+  this.course = course
+}
+
+
+const p1 = Object.create(student);
+p1.init("Sayed", 1997, "FrontEnd Developer");
+console.log(p1);
+p1.calcAge()
+
+
+

@@ -1,0 +1,19 @@
+Global Scoope, Function Scope, Block Scope
+///////////////////////////////////////////////////////////////////////////
+
+**Global Scope
+
+function y() { ** Function Scope
+    if (true) { ** Block Scope
+        var x = 1;
+	let z = 1;
+    }
+    console.log(x) => 1
+    console.log(z) => ReferenceError: z is not defined
+}
+y()
+console.log(x)
+
+just you can call the var out of the block scope inside the function scope not the global scope.
+can not call let or const out of their scopes.
+/////////////////////////////////////////////////////////////////////////////////

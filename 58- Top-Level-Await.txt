@@ -1,0 +1,1 @@
+___ In ES06 2022 You can now use await keyword out side the async funtion to handle or wait some code but that will block the entrie code until it finish 

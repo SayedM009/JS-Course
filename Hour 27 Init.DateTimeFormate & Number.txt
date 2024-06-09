@@ -1,0 +1,43 @@
+--- old way to formate date and time : 
+new Date(can put spisific date)
+
+
+--- the newest way to foramte date and time : 
+
+- new Intl.DateTimeFormat(local,options).format(value)
+
+- local : refer to user language and place [ ar-EG, en-US, fr-FR]
+
+- options : refer to somethins and it's an object
+{
+	hour: 'numeric',
+	minute: 'numeric',
+	day : 'numeric',
+	month: 'numeric',
+	year: 'numeric'
+	weekday: 'numeric'
+}
+
+- value : refer to new Date()
+
+--- Number Format :
+
+- new Intl.NumberFormat(local,options).format(value)
+
+- local : refer to user language and place [ ar-EG, en-US, fr-FR]
+
+- options : refer to somethins and it's an object
+{
+	style : 'currency',
+   	currency: currency
+	
+	or 
+
+	style : 'unit',
+     	unit: ''
+
+	look to mdn to understant
+}
+
+- value : refer to new Date()
+

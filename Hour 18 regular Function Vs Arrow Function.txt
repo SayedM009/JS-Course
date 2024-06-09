@@ -1,0 +1,41 @@
+--- arrow function does not have it's own this keyword but that refers to the nearest function or global object
+
+*** When we call a property in object is not existe will get undefined not an error
+
+- when you declare an variable with it (var) will create  a property in the global object (window) has the value of variable.
+
+1) Case one:
+
+var fN = 'sayed';
+
+const user = { // user Object does not have it's own scope but it in the global scope
+	fN : 'Elsayed',
+	age : 26,
+	test : function () {
+		console.log(this) // this here refer to user object
+	},
+	greet : () => {
+		console.log(`hey ${this.fN}`) //this here refer to window object
+	}
+
+}
+
+user.greet(); => hey sayed
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+2) Case Two:
+
+const user = { // user Object does not have it's own scope but it in the global scope
+	fN : 'Elsayed',
+	age : 26,
+	test : function () {
+		const inRF= function () {
+			console.log(this) // undefined becase when you use strict mode every regular function has it's own value (undefined)
+		}
+
+		const InAF = () => {
+			onsole.log(this) // this here will refer to object because arrow function does not have it's own value so this will refer to function 			value and the regular function will refer the object
+		}
+	}
+}

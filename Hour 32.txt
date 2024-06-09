@@ -1,0 +1,26 @@
+Syntax : 1
+
+fetch()
+.then(res => {}, rej => {})
+.catch(err => {})
+.finaly(() => )
+
+
+Syntax : 1
+
+try {
+	async function () {
+		await new Promise
+		await new Promise
+	}	
+} catch {
+	console.log(err.message)
+	
+}
+
+Promise.resolve(single value)
+Promise.reject(single value)
+Promise.all([value, value, value]) : takes an array contains sevral value and run at one time if one off them rejected will show it up
+Promise.rase([value, value, value]) : takes an array contains sevral value but first value setled will show up even it fulfiled or rejeced
+Promise.allSettled([value, value, value]) : takes an array contains sevral value and run at one time will retrun all values even there is a rejected value
+Promise.any([value, value, value]) : takes an array contains sevral value but first value fullfiled

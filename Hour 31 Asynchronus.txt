@@ -1,0 +1,29 @@
+*** TCP/IP :
+TCP : define how date travels acrross the web.
+TCP : Job breake requset or response into small chunks call packets one the packets arrive at their final destination will reassmble to the request or response. 
+IP : Job send and route these packets through the internet so it ensures that they arrive at the destination they should go using IP addresses on each packet.
+*** Callback function does not make code automatically asynchronus.
+*** Set an attribute to any element it is asynchronus way.
+*** addEventListener does not make code automatically asynchronus.
+
+** Old way to use an API
+
+1- new XMLHTTPSRequest() stored by variable let's say we will call it as request
+2- request.open('method', 'link') // method (GET, POST)
+3- request.sent()
+4- request.addEventListener('load', function() { // wating response from the server 
+	console.log(request.responseText) // will return a JSON file 
+	console.log(JSON.parse(request.responseText)) // convert the JSON file into JS Object
+})
+
+
+** New way to use an API
+
+1- fetch(url)
+2- .then((response) => respone.json(), (err) => console.log(err))
+3- .then((data) => use the data)
+4- .catch((err) => console.error(err.message))
+5- .finally(() => {})
+
+
+

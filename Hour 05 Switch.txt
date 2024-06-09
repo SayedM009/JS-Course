@@ -1,0 +1,14 @@
+there is a difference between experasion and statement:
+
+--- expersions look like : 
+
+- 3 + 4
+- 1991
+- true && false && !false
+
+--- statements look like : 
+if (23 > 1) const str = '23 is bigger';
+
+**** you can not put an statement inside template letrals ****
+
+

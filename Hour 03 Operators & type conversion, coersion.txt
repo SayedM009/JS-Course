@@ -1,0 +1,15 @@
+Check the following JS Precedence Table to see the priority execution first:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table
+
+--- Type Conversion (convert):
+
+- when we convert the type manually.
+
+Number('26') => 26 number
+
+--- Type Coercion (force):
+
+- when JS convert the type automaticlly beheind the seneses force.
+
+('10' - '5' - 4) => 1 number

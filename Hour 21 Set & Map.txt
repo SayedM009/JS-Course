@@ -1,0 +1,13 @@
+--- Set use to store unieq values and has some properties and methods like (size, has, add, delete, clear)
+
+
+--- Map looks like the Object but the key in map can be anything like object, array,  another map, string, number, boolean and others and has some properties and methods like (size, has, add, delete, clear, set, get)
+
+*** As we know can use array or object as map key but can't get as following: 
+
+myMap.set([1,2], 'test')
+myMap.get([1,2]) => undefined because the first [1,2] is not the seconde [1,2] in the heap so if you want to use it make like this
+
+arr = [1,2]
+myMap.set(arr, 'test')
+myMap.get(arr) => 'test' 

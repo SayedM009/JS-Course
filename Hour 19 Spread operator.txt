@@ -1,0 +1,43 @@
+--- Spred, Because on Right side of = 
+
+- const arr = [1, 2, ...[3,4]]
+
+ 
+--- Rest, Because on Left side of =
+
+- const [a, b, ...others] = [1,2,3,4,5]
+
+-------------------------------------------------------------
+
+|| operator : will return the first truthy value of all the operands or the last value if all of them are falsy.
+
+0 || 1 => 1
+2 || 3 => 2
+0 || 9 => 9
+
+&& operator : wil return the first falsy value of all the operands or the last value if all of the are truthy
+
+0 && 1 => 0
+1 && 2 => 2
+9 && 0 => 0
+
+--------------------------------------------------------
+
+(??) Nullish : null and undefined (not 0 or '')
+
+x = 0;
+x || 10 => 10
+
+x = null or undefined 
+x ?? 10 => 10
+
+
+----------------------------------------------------- 
+--- Logical OR assignment operator 
+- ||= will assign a value to a variable if that exact varibale is falsy right now
+
+--- Logical AND assignment operator 
+- &&= will assign a value to a variable if that exact varibale is truthy right now
+
+--- Nullish assignment operator
+- ??= will assign a value to a variable if that exact varibale is null or undefined right now

@@ -1,0 +1,35 @@
+--- array.map(function() {})
+
+- will apply the function on every element inside the array anr return a new array
+
+--- array.filter(function() {})
+
+- will apply the function on every element inside the array and return the elements just pass from condition and make a new array
+
+--- array.reduce(function() {})
+
+- will apply the function on every element inside the make the all elements is an element returns a value not an array.
+
+--- array.find(function() {})
+- will apply the function on every element inside the array and return just an element if the condition equal true
+
+--- array.findIndex(function() {})
+
+- will apply the function on every element inside the array and return just the index of an element if the condition equal true
+
+--- array.some(function() {})
+
+- will apply the function on every element inside the array and return true if anyone of elements equal the condition
+
+--- array.every(function() {})
+
+- will apply the function on every element inside the array and return true if all of elements equal the condition
+
+--- array.flat(default=1) 1 here refers to level if you increased the number will increase the levels
+
+- if we have an array contains some arrays so method will extract the insides arrays to make just an normal array => [1,2,[3,4]].flat() => [1,2,3,4]
+
+--- array.flatmap(function() {})
+
+- will return an extracted array but just in level 1 
+

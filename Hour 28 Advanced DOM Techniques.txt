@@ -1,0 +1,88 @@
+### Scrolling 
+
+// Old Way
+- .scrollTo(
+	{
+		left: element.getBoundingClientRect().left + window.pageXOffset,
+		top: element.getBoundingClientRect().top + window.pageYOffset,
+		behavior: 'smoolth'
+	}
+)
+
+// New Way
+
+- element.scrollIntoView({behavior : 'smooth'})
+
+--- Make Range 
+
+Math.floor(Math.random() * (max - min + 1) + min)
+
+--- Generate an array 
+
+Array.from({length: number}, (_,i) => i or i + 1)
+
+### Links Hover
+
+- const handleHover = function(e) {
+    if (e.target.classList.contains('')) {
+        const link = e.target;
+        const siblings = link.closest('').querySelectorAll("");
+        const logo = link.closest('').querySelector("")
+        siblings.forEach((el) => {
+            if(el !== link) el.style.opacity = this;
+        })
+        logo.style.opacity = this;
+    }
+}
+- element.addEventListener('mouseover', handleHover.bind(.5))
+- element.addEventListener('mouseout', handleHover.bind(1))
+
+###  Tab Commponant
+const tabs = document.querySelectorAll('')
+const tabsContainer = document.querySelector('')
+const tabContent = document.querySelectorAll('')
+
+tabsContainer.addEventListener('click', function (e) {
+    const clicked = e.target.closest('')
+
+    // Guard 
+    if (!clicked) return;
+
+    tabs.forEach((e) => e.classList.remove(''))
+    clicked.classList.add('')
+    
+    tabContent.forEach((e) => e.classList.remove(''))
+    document.querySelector(``).classList.add('')
+})
+
+### Sticky Nav
+
+--- old way (bad to performance)
+const section = document.querySelector("#section--1");
+window.addEventListener("scroll", function () {
+    if (window.screenY > section.getBoundingClientRect().top) {
+        nav.classList.add("sticky");
+    } else {
+        nav.classList.remove("sticky");
+    }
+})
+
+
+--- new way (prefect to performance)
+- const obsCallBack = function (entries) {
+	const [entry] = entries;
+	if (!entry.isIntersection) {
+		nav.classList.add('sticky')
+	} else {
+		nav.classList.remove('sticky')
+	}
+}
+
+const obsOptions = {
+	root : null => null here refers to viewport; vp = viewport
+	threshold :  a number or array (0) or [0, .1, 1]; 0 = out of vp , .1 or similar = 10 % of element is in with vp; 1 = whole element is in vp
+	rootMargin : '90px' could be helpful in some situactions 
+}
+
+const headerOberver = new IntersectionObserver(obsCallBack, obsOptions);
+headerOberver.observe(element)

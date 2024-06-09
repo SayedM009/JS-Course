@@ -1,0 +1,19 @@
+--- Number.isNaN(num) => check if the number is number or not
+
+--- Number.isFinite(num) => check if the number is number or not(Recommanded)
+
+--- Number.parseInt("") => parse the number from a string
+
+--- Number.parseFloat("") => parse the number from a string
+
+--- Number.isInteger(num) =>check if the number is integer or not
+
+--- Math.trunc(num) => convert float to integer
+
+--- Math.floor(num) => convert float to integer
+
+--- Math.ceil(num) => convert float to integer
+
+--- Math.round(num) => convert float to integer 
+
+--- Make Range Math.floor(Math.random() * (firstNumer - lastNumber + 1) + firstNumber)

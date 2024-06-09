@@ -1,0 +1,28 @@
+____ To deal with modules your script tag should has type="module"
+
+____ Named Import 
+
+exp : import {n1 as t1, n2 as t2 , n3 as t3} from 'filename.js'
+
+or 
+
+import * as anyObjectName from 'filename.js' : here anyObjectName will act like an object and contain all imported values
+
+
+___ Named Export
+
+
+exp : export n1
+
+or 
+
+export {n1, n2, n3}
+
+
+___ Default Export : when use it when we wants to export one thing per module
+
+exp : export default blabla
+
+___ Default Import : you can call it as you want do not need to call it with it's name
+
+exp : import tata from 'filename.js'

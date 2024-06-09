@@ -1,0 +1,123 @@
+--- for (const x of array) {
+	// statment
+}
+
+*** you can replace x with destructuring like normal way :
+
+for (const [x,y] of array.entries() {
+	// statment
+}
+----------------------------------------------------------
+
+Enhanced Object Literals : 3 ways 
+
+1: object from outside 
+
+// old 
+const c = {e: 3, g: 4}
+const obj1 = {
+	a: 1,
+	b: 2
+	c:c  // second c here refers to  an object from out side that is the old way to call object from outside just put the name
+
+}
+
+// new 
+const c = {e: 3, g: 4}
+const obj1 = {
+	a: 1,
+	b: 2,
+	c,  // c here refersto an object from out side that is the new way to call object from outside just put the object name and will language will create a property has the same name if you chanage the outside object's name you have to chage the name inside the another object
+}
+
+2: object method
+
+// old 
+const obj1 = {
+	a: 1,
+	b: 2
+	d : function() {} // you had to make a property name then put the anoynomus function to create a method inside the object
+}
+
+// new 
+const obj1 = {
+	a: 1,
+	b: 2,
+	functionName() {} // now you just put the function drict to the object and just call it
+}
+
+3: can compute property name now and use template Literals:
+
+const week = [st, su, mo]
+const obj1 = {
+	[week[0]] : 1,
+	[week[1]] : 2,
+	[week[2]] : 3,
+}
+
+------------------------------------------------------------
+
+Optional Chaining Operator : ?.
+
+?. : check if pervious value equal to undefined or null if it is equal to (undefined or null) will return undefined else wil continue.
+
+
+const weekDays = ['fri', 'sat', 'sun', 'mon', 'tue', 'wed', 'thu']
+const openingHours = {
+    [weekDays[1]] : {
+        open: 8,
+        close:  22
+    },
+    [weekDays[2]] : {
+        open: 7,
+        close:  21
+    },
+    [weekDays[3]] : {
+        open: 6,
+        close:  20
+    },
+    [weekDays[4]] : {
+        open: 5,
+        close:  19
+    },
+    [weekDays[5]] : {
+        open: 4,
+        close:  18
+    },
+    [weekDays[6]] : {
+        open: 0,
+        close:  17
+    },
+}
+const restaurant = {
+    openingHours,
+}
+
+
+// Optional Chaining Operator on Object property
+
+for (const day of weekDays) {
+    const open = restaurant.openingHours?.[day]?.open ?? 'closed'; // here as you see we put day isdie [] and did not use . notashen IDK why?
+    console.log(`On ${day}, we open at ${open} `)
+}
+
+// Optional Chaining Operator on Object method
+
+restaurant.test?.() // check if is exists or not
+
+// Optional Chaining Operator on Array 
+
+const x = [ {name: 'sayed', age : 26}, ]
+
+console.log(x[0]?.name ?? 'array is empty')
+
+--------------------------------------------------------------------------
+
+
+Object.key or Object.values or Object.enteris => returns an array 
+
+--- Object.keys(object) = > will give the object keys
+
+--- Object.values(object) => will give the object values
+
+--- Object.enteris(object) => will give the object keys and values

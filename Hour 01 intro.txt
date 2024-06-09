@@ -1,0 +1,35 @@
+--- What is JavaScript ?
+
+- JavaScript is hight-level object-oriented, multi-paradigm programming language.
+
+- high-level : we don't have to worry about complex stuff like mermory management.
+
+
+- object-oriented : based on objects, for storing most kinds of data.
+
+
+- multi-paradigm : we can use different styles of programming 
+
+
+- programming language : is a tool allows us to write code guide computer to do somthing.
+
+---The role of javascript in web development ? 
+ 
+				 (Nouns), (Adjectives), (Verbs)
+-Web page made up : HTML  ,       CSS      ,    JS
+
+- HTML : Hyper text mark up language. (Content)
+- CSS : Cascading Style Sheets. (Presentation)
+- JS : Programming language. (Builing Web Application)
+
+--- There is nothing you can't do with JS (Well, Almost...).
+
+- Dynamic effects and web applications in browser with frameworks like (React, Angular, Vue) ^_^
+
+- Web applications on web servers (Node.js)
+
+- Native mobile applications ( React native)
+
+- Native desktop applications.
+
+

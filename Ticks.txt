@@ -1,0 +1,25 @@
+________ JS Basics 
+
+___ function in JS is a value
+
+___ Any expersion produce a value 
+
+___ Object in js can accept experssion in braket notaion object[true ? true : false]
+
+___ Object can you functions inside it and it calls method 
+
+
+________ New Js Development
+
+___ Modren JS Development : you can use this shortcut to remember step (تتتا)
+
+ت : Development the all modules and 3RD party packages
+ت : Bundling all files together and skip no good code
+ت : Covert all modren js code to ES5 code by bundlers (webpack, Parcel)
+أ  : Creact the final js Bundle that ready to puplish on internet.
+
+___ JS imports modules in sync way
+
+___ JS downloads modules in async way
+
+___ Modules connected with JS in live connection not a copy

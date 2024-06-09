@@ -1,0 +1,91 @@
+DOM Has some types of nodes :
+
+1) - HTML elements nodes
+2) - Text node
+3) - Comments node  
+4) - Document node
+5) - attribute node
+
+*** If you want to do some css styls on the DOM or HTML page you have to use 
+1)- docment.documentElement (HTML page)
+2)- docment.head (HTML head)
+3)- docment.body (HTML body)
+
+*** document.querySelectorAll returns a node list
+
+*** getElementByTagName & getElementByClassName are returning  HTMLCollection list (that is important to know but i don't why mabye becasue when you delete an elements from HTML page the HTMLCollection list is updating automaticly oppsite the node list if you deleted an element it will not update the node list)
+
+--- Creating and inserting elements 
+
+- .insertAdjacentHTML(position, text)
+
+- .createElement(element)
+
+- .prepend()
+
+- .append()
+
+- .before()
+
+- .after()
+
+--- Delete elements 
+
+- .remove()
+
+- .removeChild()
+
+--- Change Style
+
+*** If you displayed the css property like this (element.style.property) will not find anything because this way will just show the inline-style css not general to get any css property value use ---method getComputedStyle(element).property.
+
+*** To change :root properties in css (document.documentElement.sytle.setProperty('property-name', value)
+
+- element.style.property = value
+- document.documentElement.sytle.setProperty('property-name', value)
+
+--- Change Attributes
+
+- element.setAttribute(attribute, value)
+
+- element.getAttribute(attribute)
+
+- elements.dataset.dataName (custome attribute) V.V.I
+
+--- Event listener
+
+- .addEventLisnter(e)
+- .removeEventLister(e)
+- e.target
+- e.currentTarget == this
+
+
+--- 
+
+querySelectorAll (childern)
+closest(parents)
+
+
+*** instead of useing document.querySelectorAll() to find global childresn you can use it on spiecfic element to have his own children like h1.querySelectorAll(className)
+
+*** element.closest(className or parentName) will search in all the element parents (oppsite of querySelectorAll) 
+
+---
+
+--- To know about element demintions and position in the web page **element.getBoundingClientRect()
+
+--- Some useful Events 
+
+- document.addEventListener('DOMContentLoaded', function(e) {
+	** After the content loaded 
+}) 
+
+- window.addEventListener('load', function(e) {
+	** After the whole window  loaded 
+})
+
+- window.addEventListener('beforeunload', function(e) {
+	** You can use it if the user wants to leave the window or not
+	e.preventDefault()
+	e.returnValue = '' 
+})

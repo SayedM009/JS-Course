@@ -1,0 +1,26 @@
+*** the main script should has type="module" to can import and export
+
+1- named export : can export thing or multiple things together but should has a name
+
+export const test = () => {}
+const text = 1
+const x = 10
+
+export {text, x}
+
+
+2- default export : used to export just one thing but should has no name and you can named when you call
+
+export default function or variable
+
+
+$$$$$$
+
+1- named importing : 
+
+import {test} || import * from "filename"
+
+
+2- default importing :
+
+import the name you will give it to the function you have exported from filename
