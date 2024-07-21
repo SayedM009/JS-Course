@@ -1,0 +1,24 @@
+--- The Problems : 
+
+- i jupm at the problem without much thinking
+- i implement the solution in an unstructured way
+- i become streassed out when things don't work
+- i am too proud to research solutions
+
+
+
+--- The Solutions :  
+- stay calm and slow down, don't just jump at a problem without a plan. 
+
+-  take a very logical and rational approach ( programming is just logic, in the end...)
+
+- use these 4-step framework to solve may problem. 
+
+- Step 01: make sure you 100% understand the problem, Ask the right questions to get a clear picture of the problem.
+
+- Step 02: Divide and conquer : break a big problem into smaller  sub-problems
+
+- Step 03: Don't be afraid to do as much research as you have to
+
+- Step 04: For bigger problems, write pseduo-code before writing the actual code 
+

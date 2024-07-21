@@ -1,0 +1,19 @@
+__ Install and use Parcel : to bundle all modules together 
+
+- npm i parcel --save-dev
+
+- npx parcel index.html (index.html the file who has the JS script that we need to bundle it) 
+
+- we can run parcel with npm scripts but first we need to define a script like "start" : "parcel index.html" then write the command npm run start 
+
+- we have to remove the type="module" from the script because old browsers do not support modules
+
+- We can write in the main script 
+
+if (module.hot) {
+	module.hot.accept()
+}
+	
+the reason to write this code it's when you update any module the parcel now inject the new modifications to the browser without reload the entire webpage. (مثلا لو انتا بتصمم فورم لتسجيل الدخول وبعد كده تدخل على الصفحة مع كل تحديث مش لازم تسجل دخول تانى زى زمان لاء هو الـ البارسل الوقتى بيحقن التحديثات بتاعت الموديل الجديدة فى الصفحة من غير تحديث الصفحة كلها)
+
+_ after finishing the development we can bundle the whole modules together also with scripts like "build" : "parcel build index.html" 

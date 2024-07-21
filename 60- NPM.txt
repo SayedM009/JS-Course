@@ -1,0 +1,18 @@
+To use NPM with vanilla JS there are some steps you have to follow :
+
+1__ download node.js
+
+2__ Use this Command line npm init
+
+3__ continue pressing enter to finish 
+
+4__ you end up with a file called package.json
+
+5__ this file where we keep all configuration inside it
+
+6__ now you able to download any library from NPM
+
+Exp : npm i nameOfThePackage
+
+
+ 

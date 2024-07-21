@@ -1,0 +1,27 @@
+1___ use IIFE function that called once at the beginning to create a new scope and return data just.
+
+2___ create new vars and data or function to handle all things inside it.
+
+3___ return an object 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1- (function() {
+	2- vars & data
+	3- return {}
+
+})()

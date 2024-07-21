@@ -1,0 +1,18 @@
+*** When we call a property or method in object is not existe will get undefined not an error 
+
+- Object does not have it's own scope it belongs to global scope
+
+- Object.assign({}, object) will make a copy of that object you have put it but it is shallow copy not deep that means if you have another object inside the main object and clone the main object to another object and change the value inside the cloned object the inner value object in the main object will change also.
+
+
+---------------------------------------------------------------------------------------------------------
+
+--- LOOP ON OBJECT
+
+Object.key or Object.values or Object.enteris => returns an array 
+
+--- Object.keys(object) = > will give the object keys
+
+--- Object.values(object) => will give the object values
+
+--- Object.enteris(object) => will give the object keys and values

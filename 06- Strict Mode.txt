@@ -1,0 +1,29 @@
+--- 'use strict' strict mode :
+
+- helping us to aviode the errors we created.
+
+- helping us to know the reseved words in the lanuage.
+
+- helping us to configer errors easly.
+
+
+--- What is the function ?
+
+- it's a peace of code we can use over and over again in our code and can hold one or more complate lines of code .
+
+**** function behave as a value so we can store it in a variable ****
+
+// function declaration
+	function name(param) {
+		code.....
+	}
+
+- function declaration can invoke before the initialization.
+
+
+// function expression
+const name =	function (param) {
+		code.....
+	}
+
+- function expression can not invoke before the initialization.

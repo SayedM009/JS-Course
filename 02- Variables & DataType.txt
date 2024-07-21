@@ -1,0 +1,42 @@
+--- Values in Js is Object or Primitive:
+
+Object => let me  = {
+	name : 'sayed'
+}
+
+- Primitive => let myName = 'sayed';
+let age = 26;
+
+- Primitives Datatype : 
+
+1- Number, float.
+2- String : Squence of characters.
+3- Boolean: Logical type that can only be true or false.
+4- undefined: value taken by a varibale that is not yet defind.
+5- Null: Also means 'empty value'.
+6- Symbol: value that is unique and cannot be changed.
+7- BigInt: larger integers that that number type can hold.
+
+-- Js has dynamic typing: we do not have to manually define the data type of the value stored in a variable. instead, data types are determind automatically.
+
+******IN JS that value has a type NOT variable.******
+
+-- let :
+
+- Best way to diclare an empty varibale.
+- Can reassign the value in let.
+
+
+-- const: 
+
+- Cannot declare an empty varibale.
+- Best way to write the fixed variable.
+- Cannot reassign the value in const you have declared(that happen to primtive value not reffrences value like object or array).
+
+--- var: it's legacey way to declare the variable (not recommanded).
+
+- when you declare an variable with it (var) will create  a property in the global object (window) has the value of variable.
+- Can reassign the value in var.
+
+
+****** the default is using const to declare a new variable but you have to be sure the variable will not change in the future, else you can use let ******
